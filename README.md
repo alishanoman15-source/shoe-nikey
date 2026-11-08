@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Nikey — Modern Footwear & E-Commerce Web Platform
 
-## Getting Started
+![Vercel Deployment](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Build Status](https://img.shields.io/badge/Build-Passing-brightgreen?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)
 
-First, run the development server:
+A responsive, high-performance frontend Nike shoe e-commerce web application. Built with a dual-interface architecture featuring a customer storefront for product browsing alongside an integrated administrative portal for inventory and layout management.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Visual Tour & Interface Previews
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+### User Side Experience
+Customer storefront for product catalog browsing, detailed item views, and cart management.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Storefront Landing & Catalog | Product & Cart Showcase |
+| :---: | :---: |
+| ![User Side Landing Page](https://github.com/user-attachments/assets/ea6a141c-4049-4d86-9345-bb3694a40829) | ![User Side Shopping View](https://github.com/user-attachments/assets/3cf48c97-4235-4a82-b112-ca2d3d3071fe) |
 
-## Learn More
+### Admin Side Portal
+Administrative dashboard to inspect product inventories, store metrics, and catalog listings.
 
-To learn more about Next.js, take a look at the following resources:
+| Admin Dashboard Overview | Inventory Management Panel |
+| :---: | :---: |
+| ![Admin Side Dashboard](https://github.com/user-attachments/assets/c5a49f0f-de6e-4945-a941-47c19f8d50c1) | ![Admin Side Inventory Listing](https://github.com/user-attachments/assets/42813b90-2c21-4300-9ba4-fd3035676552) |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Features Showcase
 
-## Deploy on Vercel
+### User Experience (Storefront)
+- **Dynamic Catalog:** Interactive product grid with category filtering, real-time search, and detailed item models.
+- **Cart & Order System:** Client-side cart state management with instant quantity updates and pricing summary calculations.
+- **Responsive Layout:** Mobile-first responsive views optimized across handheld, tablet, and desktop viewports.
+- **Micro-Interactions:** Smooth UI transitions, hover states, and dynamic view switches.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Admin Experience (Dashboard)
+- **Catalog Navigation:** Dedicated administrative interface (`/admin`) to inspect product inventories.
+- **Metric Insights:** Organized dashboard widgets displaying active listings and stock states.
+- **Layout Control:** Direct client-side control over store collections and product presentation settings.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## Tech Stack
+
+| Domain | Technology / Tool | Badge |
+| :--- | :--- | :--- |
+| **Frontend Framework** | React.js | ![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black) |
+| **Styling** | Tailwind CSS / CSS Modules | ![Tailwind](https://img.shields.io/badge/Tailwind-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white) |
+| **Routing** | React Router | ![React Router](https://img.shields.io/badge/React_Router-CA4245?style=flat-square&logo=react-router&logoColor=white) |
+| **Deployment** | Vercel Platform | ![Vercel](https://img.shields.io/badge/Vercel-000000?style=flat-square&logo=vercel&logoColor=white) |
+
+---
+
+## System Architecture
+
+```text
+shoe-nikey-frontend/
+├── Storefront Engine (Public Views)
+│   ├── Hero Showcase & Trending Collections
+│   ├── Dynamic Shoe Filtering & Product Grid
+│   └── Shopping Cart & Order Summary
+└── Administrative Engine (`/admin`)
+    ├── Product Catalog Overview
+    └── Inventory Listing Dashboard
