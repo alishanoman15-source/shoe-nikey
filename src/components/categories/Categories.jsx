@@ -1,0 +1,62 @@
+'use client';
+
+import React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useAdmin } from '@/context/AdminContext';
+
+const fallbackCategories = [
+  { id: 1, name: 'Running', image: '/images/running.png', section: 'men', active: true },
+  { id: 2, name: 'Lifestyle', image: '/images/lifestyle-1.png', section: 'men', active: true },
+  { id: 3, name: 'Basketball', image: '/images/basketball.png', section: 'men', active: true },
+  { id: 4, name: 'Nike 24.7', image: '/images/tt1.png', section: 'women', active: true },
+  { id: 5, name: 'Nike Metcon 9', image: '/images/training.png', section: 'men', active: true },
+  { id: 6, name: 'Nike Court Heritage', image: '/images/ll1.png', section: 'women', active: true },
+  { id: 7, name: 'Nike Air Rift', image: '/images/li-1.png', section: 'women', active: true },
+  { id: 8, name: 'Nike Shox Z', image: '/images/lif-1.png', section: 'women', active: true },
+];
+
+const Categories = () => {
+  const { categories: adminCategories, isLoaded } = useAdmin();
+  const categories = isLoaded && adminCategories.length > 0
+    ? adminCategories.filter((c) => c.active !== false)
+    : fallbackCategories;
+
+  return (
+    <section className="w-full py-6">
+      <div className="flex items-center justify-between mb-6">
+        <h2 className="text-xs font-bold tracking-widest uppercase" style={{ color: 'var(--text-primary)' }}>
+          SHOP BY CATEGORY
+        </h2>
+        <a href="/men" className="text-xs flex items-center gap-1 hover:underline" style={{ color: 'var(--text-muted)' }}>
+          View all <span>→</span>
+        </a>
+      </div>
+
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 gap-4">
+        {categories.map((cat, idx) => (
+          <Link
+            key={idx}
+            href={`/${cat.section}`}
+            className="flex flex-col items-center justify-center p-6 rounded-2xl cursor-pointer transition-all duration-300 hover:bg-[#1A1A1A] hover:scale-105 hover:shadow-lg hover:shadow-black/30"
+            style={{ backgroundColor: 'var(--bg-card)' }}
+          >
+            <div className="h-32 md:h-36 w-full relative">
+              <Image
+                src={cat.image}
+                alt={cat.name}
+                fill
+                className="object-contain p-1"
+              />
+            </div>
+            <span className="text-xs font-semibold mt-3" style={{ color: 'var(--text-primary)' }}>
+              {cat.name}
+            </span>
+          </Link>
+        ))}
+      </div>
+    </section>
+  );
+};
+
+export default Categories;
