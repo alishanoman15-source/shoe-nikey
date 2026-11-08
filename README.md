@@ -23,9 +23,9 @@ Customer storefront for product catalog browsing, detailed item views, and cart 
 ### Admin Side Portal
 Administrative dashboard to inspect product inventories, store metrics, and catalog listings.
 
-| Admin Dashboard Overview | Inventory Management Panel |
+| Admin Dashboard Overview | Admin profile page |
 | :---: | :---: |
-| ![Admin Side Dashboard](https://github.com/user-attachments/assets/c5a49f0f-de6e-4945-a941-47c19f8d50c1) | ![Admin Side Inventory Listing](https://github.com/user-attachments/assets/42813b90-2c21-4300-9ba4-fd3035676552) |
+| ![Admin Side Dashboard](https://github.com/user-attachments/assets/c5a49f0f-de6e-4945-a941-47c19f8d50c1) | ![Admin Side profile page](https://github.com/user-attachments/assets/42813b90-2c21-4300-9ba4-fd3035676552) |
 
 ---
 
